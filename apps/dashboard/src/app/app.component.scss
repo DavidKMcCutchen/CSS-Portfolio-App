@@ -1,0 +1,39 @@
+.sidenav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    background: none;
+    margin: 5px;
+
+}
+.mat-sidenav {
+
+}
+
+.nav_link {
+    
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    width: 150px;
+}
+
+.sidenav__container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+// .nav_link {
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+// }
+
+// .nav_link:hover {
+//     opacity: 0.5;
+
+// }

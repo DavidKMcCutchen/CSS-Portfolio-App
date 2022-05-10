@@ -1,9 +1,51 @@
-<div style="text-align: center">
-  <h1>Welcome to dashboard!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-    alt="Nx - Smart, Fast and Extensible Build System"
-  />
-</div>
-<div>Message: {{ hello$ | async | json }}</div>
+<mat-toolbar class="sidenav">
+  <mat-sidenav-container class="sidenav__container" *ngIf="opened">
+    <mat-sidenav #sidenav mode="side" class="side_ex">
+      <div class="links" *ngFor="let link of links">
+        {{ link.title }}
+      </div></mat-sidenav
+    >
+
+    <mat-sidenav-content>
+      <button mat-mini-fab class="nav_link" (click)="sidenav.toggle()"></button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <!-- <button mat-mini-fab class="sidenav__toggle" (click)="openSideNav()">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-sidenav-container>
+  <mat-sidenav>
+    
+  </mat-sidenav>
+<mat-sidenav-content class="sidenav__contant" *ngIf="opened">
+<h1>Hi</h1>
+</mat-sidenav-content>
+</mat-sidenav-container> -->
+
+  <h2 class="title ml-2">
+    {{ title }}
+  </h2>
+
+  <!-- <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    </mat-sidenav>
+      <mat-sidenav-content></mat-sidenav-content>
+    
+  </mat-sidenav-container> -->
+
+  <span class="spacer"></span>
+
+  <!-- <button mat-mini-fab (click)="register()" mat-raised-button #tooltip="matTooltip"
+  matTooltip="Register"
+  [matTooltipPosition]="position.value"
+  matTooltipHideDelay="100000"
+  aria-label="Button that displays a tooltip that hides when scrolled out of the container"
+  class="example-button">
+    <mat-icon>account_box</mat-icon>
+  </button> -->
+
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-toolbar>

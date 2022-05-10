@@ -12,10 +12,19 @@
     "module": "esnext",
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@css-portfolio/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@css-portfolio/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@css-portfolio/core-data": ["libs/core-data/src/index.ts"],
+      "@css-portfolio/core-state": ["libs/core-state/src/index.ts"],
+      "@css-portfolio/environment": ["libs/environment/src/index.ts"],
+      "@css-portfolio/material": ["libs/material/src/index.ts"],
+      "@css-portfolio/pipes": ["libs/pipes/src/index.ts"],
+      "@css-portfolio/theme": ["libs/theme/src/index.ts"],
+      "@css-portfolio/ui-login": ["libs/ui-login/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
