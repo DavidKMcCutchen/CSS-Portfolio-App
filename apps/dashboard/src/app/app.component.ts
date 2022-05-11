@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
+import { ActivatedRoute } from '@angular/router';
 import { FeaturesAuthFacade } from '@css-portfolio/core-state';
-import { ToggleAction } from '@ngrx/store-devtools/src/actions';
+import { RouterModule } from '@nestjs/core';
+
+
 
 
 
@@ -14,6 +17,11 @@ import { ToggleAction } from '@ngrx/store-devtools/src/actions';
 })
 
 export class AppComponent {
+  pageList = 'Home';
+  
+
+
+  showFiller = false;
   isAuthenticated$ = this.authFacade.isUserAuthenticated$;
   positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
   position = new FormControl(this.positionOptions[0]);
@@ -23,15 +31,24 @@ export class AppComponent {
   title= 'CSS Portfolio';
   links= [
     {path: '', icon: 'home', title: 'Home'},
-    {path: 'pages', icon: 'view_list', title: 'Pages'},
+    // {path: 'pages', icon: 'view_list', title: 'Pages'},
     {path: 'directory', icon: 'view_list', title: 'Directory'},
-    {path: 'items', icon: 'view_list', title: 'Items'},
-    {path: 'dense', icon: 'view_list', title: 'CSS Dense'},
+    {path: 'items', icon: 'filter_list', title: 'Items'},
+    {path: 'dense', icon: 'menu', title: 'CSS Dense'},
   ];
 
+  
 
 
-  constructor(private authFacade: FeaturesAuthFacade) {}
+
+
+
+
+  constructor(
+    private authFacade: FeaturesAuthFacade,
+    private route: ActivatedRoute) {};
+
+    componentLink = this.route.snapshot.pathFromRoot;
 
   logoutAttempt() {
     this.authFacade.logout();
@@ -44,4 +61,8 @@ export class AppComponent {
   openSideNav() {
     this.opened = !this.opened;
   };
+
+  // ngOnInit()  {
+  //   return console.log(this.componentLink());
+  // };
 }

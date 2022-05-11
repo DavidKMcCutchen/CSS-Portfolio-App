@@ -29,7 +29,7 @@
     box-sizing: inherit;
   }
   
-  .css-portfilio-root {
+  .css-portfolio-root {
     display: grid;
 
   }
@@ -47,11 +47,10 @@
     grid-template-columns: repeat(autofit, 1fr);
   }
 
-  // .root_grid {
-  //   display: grid;
-  //   grid-template-columns: repeat(5, 1fr);
-  //   grid-auto-flow: row;
-  // }
+  .root_grid {
+    padding: 5px;
+  }
+
   
   h1,
   h2,
