@@ -25,6 +25,8 @@ export class AppComponent {
     {path: '', icon: 'home', title: 'Home'},
     {path: 'pages', icon: 'view_list', title: 'Pages'},
     {path: 'directory', icon: 'view_list', title: 'Directory'},
+    {path: 'items', icon: 'view_list', title: 'Items'},
+    {path: 'dense', icon: 'view_list', title: 'CSS Dense'},
   ];
 
 

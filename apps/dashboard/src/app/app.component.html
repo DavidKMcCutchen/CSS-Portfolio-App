@@ -1,10 +1,20 @@
-<mat-toolbar class="sidenav">
+<div class="header">
+  <h1 class="directory_title">links.title (Calm Yourself)</h1>
+  <h1 class="title_ml-2">
+    {{ title }}
+  </h1>
+</div>
+
+  
+
+  
   <!-- <mat-sidenav-container class="sidenav__container" *ngIf="opened">
     <mat-sidenav #sidenav mode="side" class="side_ex">
       <div class="links" *ngFor="let link of links">
         {{ link.title }}
       </div></mat-sidenav
     >
+    
 
     <mat-sidenav-content>
       <button mat-mini-fab class="nav_link" (click)="sidenav.toggle()"></button>
@@ -23,9 +33,7 @@
 </mat-sidenav-content>
 </mat-sidenav-container> -->
 
-  <h2 class="title ml-2">
-    {{ title }}
-  </h2>
+  
 
   <!-- <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" [(opened)]="opened">
@@ -48,4 +56,4 @@
   <div class="app-content">
     <router-outlet></router-outlet>
   </div>
-</mat-toolbar>
+

@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './directory-items.component.html',
   styleUrls: ['./directory-items.component.scss'],
 })
-export class DirectoryItemsComponent implements OnInit {
-  constructor() {}
+export class DirectoryItemsComponent {
 
-  ngOnInit(): void {}
+
+
 }
