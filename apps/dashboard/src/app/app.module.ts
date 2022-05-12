@@ -17,6 +17,8 @@ import { DirectoryComponent } from './directory/directory.component';
 import { DirectoryDetailsComponent } from './directory/directory-details/directory-details.component';
 import { DirectoryItemsComponent } from './directory/directory-items/directory-items.component';
 import { CssDenseComponent } from './directory/directory-items/css-dense/css-dense.component';
+import { F16sComponent } from './directory/directory-items/f16s/f16s.component';
+import { TicTacToeComponent } from './directory/directory-items/tic-tac-toe/tic-tac-toe.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { CssDenseComponent } from './directory/directory-items/css-dense/css-den
     DirectoryDetailsComponent,
     DirectoryItemsComponent,
     CssDenseComponent,
+    F16sComponent,
+    TicTacToeComponent,
   ],
   imports: [
     BrowserModule,

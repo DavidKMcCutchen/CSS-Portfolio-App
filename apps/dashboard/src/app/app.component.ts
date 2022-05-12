@@ -35,6 +35,7 @@ export class AppComponent {
     {path: 'directory', icon: 'view_list', title: 'Directory'},
     {path: 'items', icon: 'filter_list', title: 'Items'},
     {path: 'dense', icon: 'menu', title: 'CSS Dense'},
+    {path: 'f16s', icon: 'menu', title: 'Viper Collage'},
   ];
 
   
@@ -48,7 +49,7 @@ export class AppComponent {
     private authFacade: FeaturesAuthFacade,
     private route: ActivatedRoute) {};
 
-    componentLink = this.route.snapshot.pathFromRoot;
+    componentLink = this.route.snapshot.paramMap.getAll;
 
   logoutAttempt() {
     this.authFacade.logout();
@@ -62,7 +63,4 @@ export class AppComponent {
     this.opened = !this.opened;
   };
 
-  // ngOnInit()  {
-  //   return console.log(this.componentLink());
-  // };
 }
