@@ -1,5 +1,11 @@
-<div class="header">
-  <h1 class="directory_title">Placeholder</h1>
+<div class="new-releases__float-btn-container">
+  <a class="float-btn" (click)="scrollTo('headerId')">
+    <mat-icon class="arrow_up">keyboard_arrow_up</mat-icon>
+  </a>
+</div>
+
+<div id="headerId" class="header">
+  <h1 class="directory_title">{{pageTitle}}</h1>
   <div class="example-sidenav-content"></div>
   <h1 class="title_ml-2">
     {{ title }}
@@ -38,7 +44,8 @@
     </mat-drawer>
   </mat-drawer-container>
 </div>
-
 <div class="app-content">
   <router-outlet></router-outlet>
 </div>
+
+

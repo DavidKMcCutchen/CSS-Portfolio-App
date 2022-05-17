@@ -19,6 +19,7 @@ import { DirectoryItemsComponent } from './directory/directory-items/directory-i
 import { CssDenseComponent } from './directory/directory-items/css-dense/css-dense.component';
 import { F16sComponent } from './directory/directory-items/f16s/f16s.component';
 import { TicTacToeComponent } from './directory/directory-items/tic-tac-toe/tic-tac-toe.component';
+import { StylizerComponent } from './directory/directory-items/stylizer/stylizer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { TicTacToeComponent } from './directory/directory-items/tic-tac-toe/tic-
     CssDenseComponent,
     F16sComponent,
     TicTacToeComponent,
+    StylizerComponent,
   ],
   imports: [
     BrowserModule,

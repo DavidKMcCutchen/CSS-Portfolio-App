@@ -6,6 +6,7 @@ import { DirectoryItemsComponent } from './directory/directory-items/directory-i
 import { CssDenseComponent } from './directory/directory-items/css-dense/css-dense.component';
 import { F16sComponent } from './directory/directory-items/f16s/f16s.component';
 import { FeaturesUnAuthGuard, FeaturesAuthGuard } from '@css-portfolio/core-data';
+import { StylizerComponent } from './directory/directory-items/stylizer/stylizer.component';
 
 // Auth and UnAuth Guards to be added later
 // canActivate: [FeaturesAuthGuard];
@@ -18,7 +19,8 @@ const routes: Route[] = [
   {path: 'items', component: DirectoryItemsComponent, canActivate: [FeaturesAuthGuard]},
   {path: 'dense', component: CssDenseComponent, canActivate: [FeaturesAuthGuard]},
   {path: 'f16s', component: F16sComponent, canActivate: [FeaturesAuthGuard]},
-  {path: 'login', component: LoginComponent, canActivate: [FeaturesUnAuthGuard] },
+  {path: 'login', component: LoginComponent },
+  {path: 'stylizer', component: StylizerComponent, canActivate: [FeaturesAuthGuard] },
   // {path: 'register', component: RegisterComponent, canActivate: [FeaturesUnAuthGuard]},
   {path: '**', redirectTo: 'wild', pathMatch: 'full'}
 ];

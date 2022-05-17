@@ -1,0 +1,33 @@
+<!-- <div class="stylizer">
+    <button (click)="flip()">Flip It</button>
+    <div id="flipMe">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+</div> -->
+<body>
+  <div id="body">
+    <h2 class="stylizer_head">Configure Customized Page Styling:</h2>
+    <div>
+      <h3>Create Gradient Background</h3>
+      <input type="color" id="color1" name="Color1" value="#06d6a0" />
+      <label for="color1">Choose Color One</label>
+    </div>
+    <div>
+      <input type="color" id="color2" name="Color2" value="#4949f3" />
+      <label for="color2">Choose Color Two</label>
+    </div>
+
+      <input type="button" value="Change" (click)="getValues()" />
+
+      <input type="button" value="Reset" (click)="resetScheme()" />
+    
+  </div>
+</body>

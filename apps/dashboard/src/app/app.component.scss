@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+
 }
 
 
@@ -76,3 +77,35 @@
 .secret_list:hover {
     opacity: 0.7;
 }
+
+.float-btn {
+    z-index: 1000;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background: none;
+
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    // box-shadow: 1px 1px 1px;
+    border: 1px solid white;
+    opacity: .7;
+
+  }
+  .float-btn:hover {
+      opacity: 1.0;
+      cursor: pointer;
+  }
+
+  .arrow_up {
+      margin-top: 15px;
+      font-size: 28px;
+      margin-right: 3px;
+  }
+
+
+
+  
