@@ -6,6 +6,10 @@
 
 }
 
+.mat-elevation-z4 {
+    background: none;
+}
+
 
 .directory_title {
     grid-column: 2;
@@ -104,6 +108,27 @@
       margin-top: 15px;
       font-size: 28px;
       margin-right: 3px;
+  }
+
+  .back-btn {
+    z-index: 1000;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background: none;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    // box-shadow: 1px 1px 1px;
+    border: 1px solid white;
+    opacity: .7;
+  }
+
+  .back-btn:hover {
+      cursor: pointer;
+      opacity: 1.0;
   }
 
 

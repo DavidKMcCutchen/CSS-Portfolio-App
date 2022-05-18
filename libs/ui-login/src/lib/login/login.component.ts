@@ -1,5 +1,5 @@
 
-import { NotificationsService } from '@css-portfolio/core-data'
+import { FeaturesAuthService, NotificationsService } from '@css-portfolio/core-data'
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -29,7 +29,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuild: FormBuilder,
     private authFacade: FeaturesAuthFacade,
-    private router: Router
+    private router: Router,
+    private authService: FeaturesAuthService
   ) {}
 
   ngOnInit(): void {
@@ -40,6 +41,7 @@ export class LoginComponent implements OnInit {
     if (!this.form.valid) return;
     this.authFacade.loginRequest(this.form.value);
   }
+
 
   private initForm() {
     this.form = this.formBuild.group({

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from "@angular/router";
-import { LoginComponent, RegisterComponent, WildComponent } from "@css-portfolio/ui-login";
+import { LoginComponent, ToolbarComponent, WildComponent } from "@css-portfolio/ui-login";
 import { DirectoryComponent } from './directory/directory.component';
 import { DirectoryItemsComponent } from './directory/directory-items/directory-items.component';
 import { CssDenseComponent } from './directory/directory-items/css-dense/css-dense.component';
@@ -19,8 +19,9 @@ const routes: Route[] = [
   {path: 'items', component: DirectoryItemsComponent, canActivate: [FeaturesAuthGuard]},
   {path: 'dense', component: CssDenseComponent, canActivate: [FeaturesAuthGuard]},
   {path: 'f16s', component: F16sComponent, canActivate: [FeaturesAuthGuard]},
-  {path: 'login', component: LoginComponent },
+  {path: 'login', component: LoginComponent},
   {path: 'stylizer', component: StylizerComponent, canActivate: [FeaturesAuthGuard] },
+  {path: 'toolbar', component: ToolbarComponent, canActivate: [FeaturesAuthGuard] },
   // {path: 'register', component: RegisterComponent, canActivate: [FeaturesUnAuthGuard]},
   {path: '**', redirectTo: 'wild', pathMatch: 'full'}
 ];

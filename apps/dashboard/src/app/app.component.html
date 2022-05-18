@@ -1,11 +1,23 @@
+<mat-toolbar id="headerId" class="mat-elevation-z4">
+  <h1>{{title}}</h1>
+</mat-toolbar>
+
 <div class="new-releases__float-btn-container">
   <a class="float-btn" (click)="scrollTo('headerId')">
     <mat-icon class="arrow_up">keyboard_arrow_up</mat-icon>
   </a>
 </div>
 
-<div id="headerId" class="header">
+
+
+
+<!-- <div id="headerId" class="header">
+  
+  
   <h1 class="directory_title">{{pageTitle}}</h1>
+
+
+  
   <div class="example-sidenav-content"></div>
   <h1 class="title_ml-2">
     {{ title }}
@@ -42,10 +54,24 @@
         Secret Button
       </button>
     </mat-drawer>
+    
   </mat-drawer-container>
-</div>
+  
+</div> -->
+
 <div class="app-content">
   <router-outlet></router-outlet>
+  <section class="search-section">
+    <div id="searchId" class="search-section__nav-bar">
+      <div class="search-section__btn-container">
+        <button
+          class="back-btn"
+          role="button"
+          type="button"
+          [routerLink]="['/directory']"
+        >
+          <img src="/assets/images/left-arrow.svg" alt="left arrow image" />
+        </button>
 </div>
 
 

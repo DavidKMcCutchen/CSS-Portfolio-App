@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
 import { ActivatedRoute, NavigationStart, Router, Event as NavigationEvent } from '@angular/router';
 import { FeaturesAuthFacade } from '@css-portfolio/core-state';
-import { RouterModule } from '@nestjs/core';
+
 
 
 
@@ -16,7 +16,7 @@ import { RouterModule } from '@nestjs/core';
   styleUrls: ['./app.component.scss'],
 })
 
-export class AppComponent {
+export class AppComponent implements OnDestroy {
   pageTitle: string;
   pageList = 'Home';
   showFiller = false;

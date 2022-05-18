@@ -64,12 +64,14 @@ h1 {
         object-fit: cover;
         width: 100%;
         max-height: 100%;
+        min-height: 100%;
       }
 
       .viper_cover {
         object-fit: cover;
         width: 100%;
         max-height: 100%;
+        min-height: 100%;
       }
 
       .cover_photo:hover {
@@ -77,6 +79,16 @@ h1 {
       }
 
       .viper_cover:hover {
+        cursor: pointer;
+      }
+      .stylizer_cover {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        min-height: 100%;
+      }
+
+      .stylizer_cover:hover {
         cursor: pointer;
       }
 
