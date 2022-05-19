@@ -38,7 +38,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(8, 1fr);
-    margin: 20px 0;
+    margin: 20px 20px;
 
     
 
@@ -54,7 +54,7 @@ h1 {
       transition: $duration all;
       max-width: 100%;
       height: auto;
-      grid-row-start: 1;
+
       
 
 
@@ -99,11 +99,6 @@ h1 {
         opacity: 0.5;
       }
 
-      
-      // &:hover { 
-      //   margin: 0 40px;
-      //   transform: scale(1.2);
-      // }
 
 
       .heading {
@@ -112,38 +107,8 @@ h1 {
         left: 20px;
         color: #fff;
       }
-
-      .duration {
-        position: absolute;
-        bottom: 0;
-        left: 20px;
-        color: #fff;
-      }
       
     }
-
-    .arrow__btn {
-      position: absolute;
-      color: #fff;
-      text-decoration: none;
-      font-size: 6em;
-      background:rgb(0,0,0);
-      width: 80px;
-      padding: 20px;
-      text-align: center;
-      z-index: 1;
-    }
-
-    .left-arrow {
-      top:0; bottom:0; left:0;
-      background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-    }
-    
-    .right-arrow {
-      top:0; bottom:0; right: 0;
-      background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-    }
-
 
   }
 }
