@@ -7,6 +7,8 @@ import { CssDenseComponent } from './directory/directory-items/css-dense/css-den
 import { F16sComponent } from './directory/directory-items/f16s/f16s.component';
 import { FeaturesUnAuthGuard, FeaturesAuthGuard } from '@css-portfolio/core-data';
 import { StylizerComponent } from './directory/directory-items/stylizer/stylizer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 // Auth and UnAuth Guards to be added later
 // canActivate: [FeaturesAuthGuard];
@@ -19,7 +21,7 @@ const routes: Route[] = [
   {path: 'items', component: DirectoryItemsComponent, canActivate: [FeaturesAuthGuard]},
   {path: 'dense', component: CssDenseComponent, canActivate: [FeaturesAuthGuard]},
   {path: 'f16s', component: F16sComponent, canActivate: [FeaturesAuthGuard]},
-  {path: 'login', component: LoginComponent},
+  {path: 'login', component: LoginComponent, canActivate: [FeaturesUnAuthGuard]},
   {path: 'stylizer', component: StylizerComponent, canActivate: [FeaturesAuthGuard] },
   {path: 'toolbar', component: ToolbarComponent, canActivate: [FeaturesAuthGuard] },
   // {path: 'register', component: RegisterComponent, canActivate: [FeaturesUnAuthGuard]},

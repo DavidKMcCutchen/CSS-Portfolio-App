@@ -55,6 +55,8 @@ h1 {
       max-width: 100%;
       height: auto;
       grid-row-start: 1;
+      
+
 
 
 
@@ -74,13 +76,6 @@ h1 {
         min-height: 100%;
       }
 
-      .cover_photo:hover {
-        cursor: pointer;
-      }
-
-      .viper_cover:hover {
-        cursor: pointer;
-      }
       .stylizer_cover {
         object-fit: cover;
         width: 100%;
@@ -88,8 +83,20 @@ h1 {
         min-height: 100%;
       }
 
+      .cover_photo:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
+
+      .viper_cover:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
+      
+
       .stylizer_cover:hover {
         cursor: pointer;
+        opacity: 0.5;
       }
 
       

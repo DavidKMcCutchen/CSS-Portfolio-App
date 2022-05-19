@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
@@ -44,7 +45,8 @@ export class AppComponent implements OnDestroy {
   constructor(
     private authFacade: FeaturesAuthFacade,
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private location: Location) {
       this.event$
       =this.router.events
           .subscribe(
@@ -61,8 +63,6 @@ export class AppComponent implements OnDestroy {
   };
 
     
-  
-
   logoutAttempt() {
     this.authFacade.logout();
   }
@@ -71,12 +71,12 @@ export class AppComponent implements OnDestroy {
     this.authFacade.register();
   }
 
-  openSideNav() {
-    this.opened = !this.opened;
-  };
-
   scrollTo(elementId: string): void {
     document.getElementById(elementId)?.scrollIntoView()
+  };
+
+  back(): void {
+    this.location.back()
   }
 
 

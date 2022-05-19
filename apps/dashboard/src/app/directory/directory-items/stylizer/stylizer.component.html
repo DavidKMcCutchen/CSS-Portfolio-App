@@ -13,23 +13,51 @@
         <div class="item">10</div>
 </div> -->
 <body>
-  <div id="body">
+  <div class="body_box" id="body">
     <h2 class="stylizer_head">Configure Customized Page Styling:</h2>
-    <div>
-      <h3>Create Gradient Background</h3>
+    <div class="custom_grid">
+      <div class="custom_colors">
+      <h2>Create Gradient Background</h2>
+      <h3>Choose Two Colors</h3>
+      <div>
       <input type="color" id="color1" name="Color1" value="#06d6a0" />
-      <label for="color1">Choose Color One</label>
-    </div>
+      <label for="color1">Choose Color One</label></div>
+    
     <div>
       <input type="color" id="color2" name="Color2" value="#4949f3" />
       <label for="color2">Choose Color Two</label>
     </div>
-
+<div>
       <input type="button" value="Change" (click)="getValues()" />
 
-      <input type="button" value="Reset" (click)="resetScheme()" />
-    
+      <input type="button" value="Reset" (click)="resetScheme()" /></div>
+      </div>
+      <div class="font_change">
+        <h2>Select Custom Text Options</h2>
+      <h3>Choose a Font</h3>
+      <mat-form-field appearance="fill">
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>Default</mat-option>
+          <mat-option value="Arial">Arial</mat-option>
+          <mat-option value="Times New Roman">Times New Roman</mat-option>
+          <mat-option value="Times">Times</mat-option>
+          <mat-option value="Courier New">Courier New</mat-option>
+          <mat-option value="Courier">Courier</mat-option>
+          <mat-option value="Verdana">Verdana</mat-option>
+          <mat-option value="Georia">Georia</mat-option>
+          <mat-option value="Palatino">Palatino</mat-option>
+          <mat-option value="Garamond">Garamond</mat-option>
+          <mat-option value="Bookman">Bookman</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <input type="button" value="Change Font" (click)="changeFont()">
+      <p>Personal Bio on David Kirtland McCutchen</p>
+      </div>
   </div>
+</div>
+  
   </body>
 
   

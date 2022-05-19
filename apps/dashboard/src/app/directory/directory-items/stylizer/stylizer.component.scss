@@ -7,8 +7,31 @@
   //   grid-template-columns: 1fr 1fr;
   // }
 
+  // .body_box {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+
+  .custom_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+  .custom_colors {
+    display: flexbox;
+    flex-direction: column;
+
+  }
+
+
   .stylizer_head {
     text-align: center;
 
   }
+
+  .font_change {
+    text-align: center;
+  }
+
 
