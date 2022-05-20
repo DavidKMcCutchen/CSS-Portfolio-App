@@ -11,6 +11,6 @@ export class WildComponent {
   constructor(private router: Router) {}
 
   redirectTo() {
-    this.router.navigate(['/entries']);
+    this.router.navigate(['/']);
   }
 }
