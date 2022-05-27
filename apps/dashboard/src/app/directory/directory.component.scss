@@ -27,17 +27,16 @@ h1 {
   display: grid;
   grid-template-columns: repeat(6, 100%);
   grid-template-rows: repeat(6, 100%);
-  overflow:hidden;
   scroll-behavior: smooth;
 
 
 
   section {
-    width: 100%;
-    position: relative;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(auto-fill, 300px);
+    grid-auto-flow: row;
+    grid-gap: 10px;
     margin: 20px 20px;
 
     
@@ -106,6 +105,7 @@ h1 {
         bottom: 20px;
         left: 20px;
         color: #fff;
+        text-size-adjust: auto;
       }
       
     }

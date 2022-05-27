@@ -8,6 +8,7 @@ import { F16sComponent } from './directory/directory-items/f16s/f16s.component';
 import { FeaturesUnAuthGuard, FeaturesAuthGuard } from '@css-portfolio/core-data';
 import { StylizerComponent } from './directory/directory-items/stylizer/stylizer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TicTacToeComponent } from './directory/directory-items/tic-tac-toe/tic-tac-toe.component';
 
 
 // Auth and UnAuth Guards to be added later
@@ -24,6 +25,7 @@ const routes: Route[] = [
   {path: 'login', component: LoginComponent, canActivate: [FeaturesUnAuthGuard]},
   {path: 'stylizer', component: StylizerComponent, canActivate: [FeaturesAuthGuard] },
   {path: 'toolbar', component: ToolbarComponent, canActivate: [FeaturesAuthGuard] },
+  {path: 'tictactoe', component: TicTacToeComponent, canActivate: [FeaturesAuthGuard] },
   // {path: 'register', component: RegisterComponent, canActivate: [FeaturesUnAuthGuard]},
   {path: '**', redirectTo: 'wild', pathMatch: 'full'}
 ];

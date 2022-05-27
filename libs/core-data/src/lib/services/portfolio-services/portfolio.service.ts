@@ -4,7 +4,7 @@ import { PortfolioEnvironment, PORTFOLIO_ENVIRONMENT } from '@css-portfolio/envi
 import { Page } from '@css-portfolio/api-interfaces';
 
 
-
+export const test = 'https://api-30x30.herokuapp.com/'
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class PortfoliosService {
     @Inject(PORTFOLIO_ENVIRONMENT) private environment: PortfolioEnvironment
   ) {}
 
-  all() {
+  getAll() {
     return this.httpClient.get<Page[]>(this.getUrl())
   };
 
@@ -38,7 +38,7 @@ export class PortfoliosService {
   };
 
   private getUrl() {
-    return `${this.environment.apiUrl}${this.model}`
+    return `${test}${this.model}`
   };
 
   private getUrlById(id) {

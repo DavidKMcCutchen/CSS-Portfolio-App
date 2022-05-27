@@ -20,6 +20,8 @@ import { CssDenseComponent } from './directory/directory-items/css-dense/css-den
 import { F16sComponent } from './directory/directory-items/f16s/f16s.component';
 import { TicTacToeComponent } from './directory/directory-items/tic-tac-toe/tic-tac-toe.component';
 import { StylizerComponent } from './directory/directory-items/stylizer/stylizer.component';
+import { SquareComponent } from './directory/directory-items/tic-tac-toe/square/square.component';
+import { BoardComponent } from './directory/directory-items/tic-tac-toe/board/board.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { StylizerComponent } from './directory/directory-items/stylizer/stylizer
     F16sComponent,
     TicTacToeComponent,
     StylizerComponent,
+    SquareComponent,
+    BoardComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,7 @@ import { StylizerComponent } from './directory/directory-items/stylizer/stylizer
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    PipesModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent],

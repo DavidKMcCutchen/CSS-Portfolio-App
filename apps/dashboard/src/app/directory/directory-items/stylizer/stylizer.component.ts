@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { timer, pipe, of, map, interval } from 'rxjs';
 
 @Component({
   selector: 'css-portfolio-stylizer',
@@ -8,35 +9,32 @@ import { Component } from '@angular/core';
 export class StylizerComponent {
   selected = '';
   test: boolean;
-  
 
-  getValues(){
+
+  getValues() {
     const c1 = (<HTMLInputElement>document.getElementById('color1')).value;
     const c2 = (<HTMLInputElement>document.getElementById('color2')).value;
     const linearGradient = `url("/assets/images/topography.svg"),linear-gradient(${c1}, ${c2})`;
     console.log('Background Changed to:', linearGradient);
-  
 
-    return (<HTMLInputElement>document.getElementById('body')).style.backgroundImage = linearGradient;
-  };
+    return ((<HTMLInputElement>(
+      document.getElementById('body')
+    )).style.backgroundImage = linearGradient);
+  }
 
   resetScheme() {
-    return (<HTMLInputElement>document.getElementById('body')).style.background = "none";
-  };
+    return ((<HTMLInputElement>(
+      document.getElementById('body')
+    )).style.background = 'none');
+  }
 
   changeFont() {
-  const object = (<HTMLInputElement>document.getElementById('body'));
-  return object.style.setProperty("font-family", `"${this.selected}"`)
-    
+    const object = <HTMLInputElement>document.getElementById('body');
+    return object.style.setProperty('font-family', `"${this.selected}"`);
   }
-  
+
   flip() {
     const flipMe = document.getElementById('flipMe');
     flipMe?.classList.toggle('flipper');
-  };
-
   }
-
-  
-
-
+}

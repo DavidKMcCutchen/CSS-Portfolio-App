@@ -8,6 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class DirectoryItemsComponent implements OnInit {
 
   ngOnInit() {
-    window.location.href = "https://www.youtube.com/watch?v=7NI0iifd4eM";
+    window.location.href = "https://www.youtube.com/watch?v=_k-F-MMvQV4";
   };
 };
